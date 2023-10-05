@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            background-image: url(back.png);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .in {
+            width: 600px;
+            height: 600px;
+            position: absolute;
+            left: 200px;
+            top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+<script type="text/javascript">
+    var a = ["in1", "in2", "in3", "in4", "in5", "in6"];
+
+    window.onload = function () {
+        for (var i = 0; i < 20; i++) {
+            var t = document.createElement("img");
+            t.src = a[randomBH(0, 5)] + ".png"; // 이미지 파일 경로를 적절하게 수정하세요
+            t.className = "in";
+            t.style.width = randomBH(90, 200) + "px";
+            t.style.height = "auto";
+            t.style.left = Math.random() * window.innerWidth + "px";
+            t.style.top = Math.random() * window.innerHeight + "px";
+            document.body.appendChild(t);
+        }
+    };
+
+    function randomBH(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+</script>
+
+<!-- 아래 이미지 태그들의 클래스 이름을 "in1", "in2", 등으로 변경하세요 -->
+
+</body>
+</html>
